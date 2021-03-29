@@ -1,10 +1,13 @@
 package com.lessons;
 
+import java.util.Arrays;
+
 public class Lesson1 {
 
     public static void main(String[] args) {
         System.out.println("Task1: " + task1(3.001, 2.001, 5.000) + "\n");
-        System.out.println("Task2: " + task2(new int[]{1, 23, 4, 1, 5, 1}, 1) + "\n");
+        System.out.println("Task2: " + task2_1(new int[]{1, 23, 4, 1, 5, 1}, 1) + "\n");
+       task2_2(new int[]{1, 23, 4, 1, 5, 1}, 1);
         System.out.println("Task3.1: " + task3(12345, 0) + "\n");
         System.out.println("Task3.2: " + task3(12345) + "\n");
         System.out.println("Task4: " + task4(new int[]{3, 1, 8, 1, 9, 3, 5, 8, 9}) + "\n");
@@ -29,7 +32,7 @@ public class Lesson1 {
         return a;
     }
 
-    private static int task2(int[] numbers, int deleted) {
+    private static int task2_1(int[] numbers, int deleted) {
         int countDeleted = 0;
         for (int i = 0, j = numbers.length / 2; i < numbers.length / 2 || j < numbers.length; i++, j++) {
             if (i != numbers.length / 2 && numbers[i] == deleted) {
@@ -42,6 +45,16 @@ public class Lesson1 {
         return countDeleted;
     }
 
+
+    private static void task2_2(int[] numbers, int deleted) {
+        int k = 0;
+        for (int number : numbers) {
+            if (deleted != number) {
+                numbers[k] = number;
+            }
+        }
+        System.out.println(Arrays.toString(numbers));
+    }
 
     private static int task3(int number, int reversed) {
         if (number == 0) {
