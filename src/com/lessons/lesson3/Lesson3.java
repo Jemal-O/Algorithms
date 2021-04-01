@@ -110,7 +110,7 @@ public class Lesson3 {
                 max = array[i];
             }
             if (array[i] < min) {
-                max = array[i];
+                min = array[i];
             }
         }
         int[] countingArray = new int[max - min + 1];
