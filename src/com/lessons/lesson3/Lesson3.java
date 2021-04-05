@@ -66,6 +66,11 @@ public class Lesson3 {
 
 
     private static int[] quickSort(int[] array, int left, int right) {
+
+        if (right - left <= 1) {
+            return array;
+        }
+
         int possiblePivot = array[left], possiblePivot2 = array[right / 2], possiblePivot3 = array[right];
         int pivotI = left, pivot;
 
@@ -92,13 +97,9 @@ public class Lesson3 {
         array[pivotI] = array[k];
         array[k] = pivot;
 
-        if (left < k - 1) {
-            quickSort(array, 0, k - 1);
-        }
-
-        if (k + 1 < right) {
+            quickSort(array, left, k - 1);
             quickSort(array, k + 1, right);
-        }
+
         return array;
     }
 
