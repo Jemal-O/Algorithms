@@ -97,8 +97,8 @@ public class Lesson3 {
         array[pivotI] = array[k];
         array[k] = pivot;
 
-            quickSort(array, left, k - 1);
-            quickSort(array, k + 1, right);
+        quickSort(array, left, k - 1);
+        quickSort(array, k + 1, right);
 
         return array;
     }
