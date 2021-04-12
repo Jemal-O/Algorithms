@@ -28,6 +28,7 @@ public class Lesson6 {
 
         //TODO: добавить точку остановки в нужной ячейке
         //TODO: путь по индексам обратно
+        //TODO: пофиксить перезапись начальной точки
         int[] arr = new int[24];
         int rowCount = 6;
         findInLabirint(arr, 3, 0, rowCount);
